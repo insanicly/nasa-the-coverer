@@ -2,9 +2,13 @@ name: Test Coverage
 
 on:
   pull_request:
-    branches: [main]
+    branches:
+      - main
+      - master
   push:
-    branches: [main]
+    branches:
+      - main
+      - master
 
 jobs:
   coverage:
@@ -24,6 +28,12 @@ jobs:
 
       - name: Run tests with coverage
         run: yarn test:coverage
+
+      - name: Debug - List coverage directory
+        run: ls -la coverage/
+
+      - name: Debug - Show coverage summary
+        run: cat coverage/coverage-summary.json || echo "File not found"
 
       - name: Add Coverage PR Comment
         uses: MishaKav/jest-coverage-comment@main

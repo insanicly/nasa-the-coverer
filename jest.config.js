@@ -34,4 +34,5 @@ module.exports = {
       isolatedModules: true,
     },
   },
+  coverageReporters: ['json-summary', 'text', 'lcov'],
 };
