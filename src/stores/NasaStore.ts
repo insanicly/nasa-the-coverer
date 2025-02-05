@@ -3,7 +3,7 @@ import axios from 'axios';
 import { APOD, NearEarthObject, NEOFeed } from '../types/nasa';
 import { NASA_API_CONFIG, getApiUrl } from '../config/api';
 
-class NasaStore {
+export class NasaStore {
   apod: APOD | null = null;
   neoList: NearEarthObject[] = [];
   loading = false;
