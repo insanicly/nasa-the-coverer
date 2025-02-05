@@ -20,6 +20,7 @@ const NEOCard: React.FC<Props> = observer(({ neo, onToggleFavorite }) => {
         className={`favorite-button ${neo.isFavorite ? 'favorite-active' : ''}`}
         onClick={() => onToggleFavorite(neo.id)}
         aria-label="favorite"
+        data-testid="favorite-button"
       >
         ⭐
       </button>
